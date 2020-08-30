@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Fruit Ninja</title>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    
+    <script>
+$(document).ready(function(){
+    window.alert("Hi");
+    var playing = false;
+    var score;
+    var trialsleft;
+    $("#startreset").click(function(){
+      if(playing == true){
+              location.reload();
+      }
+      else{
+          playing = true;
+          score = 0;
+          $("#scorevalue").html(score);
+          $("#trialsleft").hide();
+          trialleft=3;
+//          for(i=0; i<trialsleft; i++){
+//        $("trialleft").append('<img src="images/heart.png" class="life">')
+          }
+      }
+    });
+});
+</script>
+    
+</head>
+<body>
+    <div id="container">
+        <div id="trialleft"></div>
+        <div id="score">Score: <span id="scorevalue">0</span></div>
+        <div id="correct">Correct</div>
+        <div id="wrong">Try Again</div>
+        <div id="question"></div>
+        <div id="instruction">Catch Fruits</div>
+        <div id="startreset">Start Game</div>
+        <div id="gameover"><p>Game Over!</p><p>Your score is: <span id="stats">0</span> </p></div>
+    </div>
+    
+</body>
+</html>
